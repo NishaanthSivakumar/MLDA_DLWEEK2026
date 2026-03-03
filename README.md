@@ -1,52 +1,114 @@
-# LumiGRAD (Clean Build)
+# LumiGRAD 🎓
 
-This is a minimal, hackathon build that demonstrates:
-- Topic-level mastery tracking with time decay (evolving learning state)
-- Learning state classification (improving/stable/regressing/inactive)
-- Explainable, actionable weekly plan generation
-- Streamlit dashboard + quiz page
-- SQLite storage (lightweight, realistic over months/years)
+**Adaptive learning analytics with explainable, AI-driven weekly study plans.**
+
+LumiGRAD tracks your mastery across course topics over time, detects learning trends (improving, stable, regressing, or inactive), and generates actionable weekly plans — powered by an LLM backend and a clean Streamlit dashboard.
+
+---
+
+## Features
+
+- **Topic-level mastery tracking** with time decay (your learning state evolves realistically over weeks/months)
+- **Learning state classification** — automatically labels each topic as *improving*, *stable*, *regressing*, or *inactive*
+- **Explainable weekly plan generation** — AI-generated study plans grounded in your actual performance data
+- **Quiz module** — scrapes course lecture PDFs and generates + grades quizzes via LLM agents
+- **Streamlit dashboard** — visual progress overview and quiz interface in one place
+- **SQLite storage** — lightweight, file-based, built to scale across months of usage
+
+---
 
 ## Quickstart
 
-### 1) Install
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-org/lumigrad.git
+cd lumigrad
+```
+
+### 2. Set up your environment file
+
+Create a `.env` file in the project root. **This file is not included in the repository for security reasons — you must create it yourself.**
+
+#### Option A: Azure OpenAI (recommended)
+
+```env
+AZURE_OPENAI_ENDPOINT=https://<your-resource-name>.openai.azure.com
+AZURE_OPENAI_API_KEY=your-azure-api-key-here
+AZURE_OPENAI_DEPLOYMENT=your-deployment-name
+AZURE_OPENAI_API_VERSION=2024-10-21
+```
+
+#### Option B: OpenAI
+
+```env
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_MODEL=gpt-4o
+```
+
+> ⚠️ Never commit your `.env` file to version control. It is listed in `.gitignore` by default.
+
+### 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2) Create DB + seed mock data
+### 4. Initialize the database and seed mock data
+
 ```bash
 python -m db_engine.setup_db
 ```
 
-This creates `db_engine/lumi_grad.db` and seeds the 2-course mock pattern.
+This creates `db_engine/lumi_grad.db` and seeds a 2-course mock learning pattern so you can explore the dashboard immediately.
 
-### 3) Run Streamlit
+### 5. Launch the app
+
 ```bash
 streamlit run landing.py
 ```
 
-## Notes
-- `quiz/quiz_runner.py` scrapes the lecture page for a PDF, extracts text, and calls an LLM QuizAgent.
-- `quiz/agents.py` includes QuizAgent + GraderAgent (LLM-based) that return strict JSON consumed by the UI.
-- All DB paths are centralized in `db_engine/db.py` to avoid NameError/relative-path issues.
+---
+
 
 ## LLM Configuration
 
-The app supports **OpenAI** or **Azure OpenAI** via environment variables.
+LumiGRAD supports both **Azure OpenAI** and **OpenAI** via environment variables. The app auto-detects which provider to use based on which variables are present.
 
-### OpenAI
+| Provider | Required Variables |
+|---|---|
+| **Azure OpenAI** | `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` |
+| **OpenAI** | `OPENAI_API_KEY` |
 
-Set:
-- `OPENAI_API_KEY`
-- (optional) `OPENAI_MODEL` (default: `gpt-4o`)
+Optional variables:
+- `OPENAI_MODEL` — defaults to `gpt-4o`
+- `AZURE_OPENAI_API_VERSION` — defaults to `2024-10-21`
 
-### Azure OpenAI
+---
 
-Set:
-- `AZURE_OPENAI_ENDPOINT` (example: `https://<resource>.openai.azure.com`)
-- `AZURE_OPENAI_API_KEY`
-- `AZURE_OPENAI_DEPLOYMENT` (your deployment name)
-- (recommended) `AZURE_OPENAI_API_VERSION` (default in code: `2024-10-21`)
+## How It Works
 
-For Azure, the **deployment name** is passed as the `model` parameter in the SDK.
+1. **Mastery tracking** — quiz results are stored per topic with timestamps. A time-decay function reduces confidence scores for topics you haven't revisited recently.
+2. **State classification** — each topic is classified based on score trend and recency: *improving*, *stable*, *regressing*, or *inactive*.
+3. **Weekly plan generation** — an LLM agent reads your current learning state and produces a prioritized, explainable study plan.
+4. **Quiz pipeline** — `quiz_runner.py` scrapes the lecture page for a PDF, extracts text, and passes it to `QuizAgent`. Answers are evaluated by `GraderAgent`, both returning strict JSON consumed by the UI.
+
+---
+
+## Notes
+
+- All database paths are centralized in `db_engine/db.py` to avoid path/import issues across modules.
+- The quiz agents return strict JSON — if you extend them, maintain the schema to avoid UI breakage.
+- SQLite is used intentionally for simplicity; the schema is straightforward to migrate to PostgreSQL if needed.
+
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+
+---
+
+## License
+
+[MIT](LICENSE)
