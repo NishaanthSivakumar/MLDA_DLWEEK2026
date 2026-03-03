@@ -1,6 +1,6 @@
 # LumiGRAD (Clean Build)
 
-This is a minimal, **competition-ready** build that demonstrates:
+This is a minimal, hackathon build that demonstrates:
 - Topic-level mastery tracking with time decay (evolving learning state)
 - Learning state classification (improving/stable/regressing/inactive)
 - Explainable, actionable weekly plan generation
@@ -39,7 +39,7 @@ The app supports **OpenAI** or **Azure OpenAI** via environment variables.
 
 Set:
 - `OPENAI_API_KEY`
-- (optional) `OPENAI_MODEL` (default: `gpt-4o-mini`)
+- (optional) `OPENAI_MODEL` (default: `gpt-4o`)
 
 ### Azure OpenAI
 
