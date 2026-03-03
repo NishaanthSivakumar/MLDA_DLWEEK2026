@@ -1,6 +1,6 @@
 # LumiGRAD 🎓
 
-**Adaptive learning analytics with explainable, AI-driven weekly study plans.**
+**AI-Powered Academic Performance Intelligence System.**
 
 LumiGRAD tracks your mastery across course topics over time, detects learning trends (improving, stable, regressing, or inactive), and generates actionable weekly plans — powered by an LLM backend and a clean Streamlit dashboard.
 
