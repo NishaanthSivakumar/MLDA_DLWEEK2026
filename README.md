@@ -112,3 +112,19 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## 🚀 Future Extensions
+
+- Bayesian Knowledge Tracing (BKT) implementation
+- Deep Knowledge Tracing (LSTM-based)
+- Reinforcement Learning for optimal revision scheduling
+- PostgreSQL migration for multi-user scaling
+- Authentication system (multi-student dashboard)
+- Analytics export (CSV / PDF reports)
+- Exam readiness probabilistic scoring
+
+LumiGRAD is built as a foundation for a full AI learning intelligence platform.
+
+##
