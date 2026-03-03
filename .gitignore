@@ -1,7 +1,21 @@
+# Environment
 .env
+
+# Python
 __pycache__/
 *.pyc
-*.db
-.vscode/
-.history/
+
+# Testing
 .pytest_cache/
+
+# VS Code
+.vscode/
+
+# History
+.history/
+
+# Databases
+*.db
+
+# MacOS
+.DS_Store
