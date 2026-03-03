@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Vincent Y. F. Tan",
+    "title": "Dean's Chair Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/dsatv/",
+    "research_areas": ["information theory", "machine learning", "statistical learning theory", "high-dimensional statistics"]
+  },
+  {
+    "name": "Alexandre Thiery",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/dsata/",
+    "research_areas": ["Bayesian statistics", "computational statistics", "machine learning", "Monte Carlo methods"]
+  },
+  {
+    "name": "Jonathan Scarlett",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/dsatjs/",
+    "research_areas": ["information theory", "machine learning", "high-dimensional statistics", "optimisation"]
+  },
+  {
+    "name": "David Nott",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/standj/",
+    "research_areas": ["Bayesian computation", "approximate inference", "variational methods", "statistical modelling"]
+  },
+  {
+    "name": "Cheng Li",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stacl/",
+    "research_areas": ["Bayesian methods", "high-dimensional inference", "machine learning", "nonparametric statistics"]
+  },
+  {
+    "name": "Tong Xin",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/statx/",
+    "research_areas": ["high-dimensional statistics", "machine learning", "optimisation", "reinforcement learning"]
+  },
+  {
+    "name": "Adrian Röllin",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/staar/",
+    "research_areas": ["probability theory", "Stein's method", "random graphs", "convergence rates"]
+  },
+  {
+    "name": "Chen Ying",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/staxyc/",
+    "research_areas": ["financial econometrics", "risk management", "time series analysis", "financial modelling"]
+  },
+  {
+    "name": "Choi Kwok Pui",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stackp/",
+    "research_areas": ["combinatorics", "probability", "bioinformatics", "computational biology"]
+  },
+  {
+    "name": "Li Jialiang",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stajl/",
+    "research_areas": ["survival analysis", "clinical trials", "semiparametric methods", "biostatistics"]
+  },
+  {
+    "name": "Ma Yanyuan",
+    "title": "Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stamy/",
+    "research_areas": ["semiparametric methods", "measurement error models", "dimension reduction", "high-dimensional statistics"]
+  },
+  {
+    "name": "Xu Xinyi",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/staxx/",
+    "research_areas": ["Bayesian statistics", "model selection", "predictive inference", "foundations of statistics"]
+  },
+  {
+    "name": "Lim Yew Wei",
+    "title": "Senior Lecturer",
+    "url": "https://www.stat.nus.edu.sg/staff/stalyw/",
+    "research_areas": ["machine learning", "deep learning", "neural networks", "statistical computing"]
+  },
+  {
+    "name": "Sanjay Chaudhuri",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stasc/",
+    "research_areas": ["robust statistics", "estimating equations", "survey sampling", "computational statistics"]
+  },
+  {
+    "name": "Gan Fah Fatt",
+    "title": "Senior Lecturer",
+    "url": "https://www.stat.nus.edu.sg/staff/stagff/",
+    "research_areas": ["statistical process control", "quality engineering", "applied statistics", "industrial statistics"]
+  },
+  {
+    "name": "Teo Kwong San",
+    "title": "Senior Lecturer",
+    "url": "https://www.stat.nus.edu.sg/staff/talks/",
+    "research_areas": ["applied statistics", "regression analysis", "data analysis", "statistical methods"]
+  },
+  {
+    "name": "Zheng Zemin",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stazz/",
+    "research_areas": ["high-dimensional statistics", "variable selection", "penalised regression", "empirical processes"]
+  },
+  {
+    "name": "Ajay Jasra",
+    "title": "Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/staja/",
+    "research_areas": ["Monte Carlo methods", "Bayesian computation", "sequential Monte Carlo", "computational statistics"]
+  },
+  {
+    "name": "Yao Luo",
+    "title": "Assistant Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/staly/",
+    "research_areas": ["econometrics", "industrial organisation", "auction theory", "structural estimation"]
+  },
+  {
+    "name": "Matias Quiroz",
+    "title": "Associate Professor",
+    "url": "https://www.stat.nus.edu.sg/staff/stamq/",
+    "research_areas": ["Bayesian inference", "subsampling methods", "machine learning", "scalable computation"]
+  }
+]
