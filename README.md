@@ -22,8 +22,8 @@ LumiGRAD tracks your mastery across course topics over time, detects learning tr
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-org/lumigrad.git
-cd lumigrad
+git clone https://github.com/NishaanthSivakumar/MLDA_DLWEEK2026.git
+cd MLDA_DLWEEK2026
 ```
 
 ### 2. Set up your environment file
